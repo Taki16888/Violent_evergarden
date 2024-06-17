@@ -1,0 +1,93 @@
+<html><head></head><body><meta charset="UTF-8">
+    <meta name="20222419胡宣羽   20222426魏宏宇" content="width=device-width, initial-scale=1.0">
+    <title>Clannad</title>
+
+    <style>
+
+      *{margin: 0;padding: 0;}
+      a{text-decoration: none;}
+      h1{font-size: 35px;font-weight: 400;width: 100%;height: 150px;text-align: center;line-height: 150px;}
+
+      header{width: 100%;height: 50px;background: #922022}
+      .dh{width: 1200px;height: 50px;color: #fff;font-style: 14px;margin: 0 auto;}
+      .dhz{float: left;height: 50px;line-height: 50px;}
+      .dhz a{float: left;color: #fff;padding: 0 30px;}
+      .dhy{height: 50px;line-height: 50px;float: right;}
+      .dhy a{color: #fff;}
+
+      section{width: 100%;height: 720px;background: url("https://pic4.zhimg.com/v2-c42ee2b91437ca5b2920ee5e5ad75e61_r.jpg")no-repeat center;}
+
+      #bili-radio {width: 100%;}
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    li {
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        padding: 15px;
+        width: 30%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    li:hover {
+        transform: translateY(-5px);
+    }
+    li a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* 页脚样式 */
+    footer{width: 100%;height: 150px;background: #922022;margin-top: 50px;text-align: center;line-height: 150px;color: #fff;}
+
+</style>
+
+
+
+
+<header>
+    <div class="dh">
+        <div class="dhz">
+            <a href="">首页</a>
+            <a href="https://key.visualarts.gr.jp/">开发公司</a>
+            <a href="https://baijiahao.baidu.com/s?id=1707353181291463921">剧情介绍</a>
+            <a href="https://tieba.baidu.com/p/5561944354">游戏攻略</a>
+            <a href="https://movie.douban.com/subject/2277181/">豆瓣评分</a>
+        </div>
+        <div class="dhy">
+            <a href="login.html">登录</a>
+        </div>
+    </div>
+</header>
+
+<section></section>
+
+<h1>主题曲</h1>
+<iframe id="bili-radio" src="https://player.bilibili.com/player.html?aid=210366492&amp;bvid=BV194411M7Kd&amp;cid=473918075&amp;page=1" scrolling="no" border="0" framespacing="0" allowfullscreen="true" style="height: 432.8px;"> </iframe>
+
+<script>
+    document.getElementById("bili-radio").style.height = document.getElementById("bili-radio").scrollWidth * 0.4 + "px";
+</script>
+
+<h1>主要角色</h1>
+<ul>
+  <li><a href="https://baike.baidu.com/item/%E5%8F%A4%E6%B2%B3%E6%B8%9A/1307024">古河渚</a></li>
+  <li><a href="https://baike.baidu.com/item/%E5%86%88%E5%B4%8E%E6%9C%8B%E4%B9%9F/1307288?lemmaFrom=lemma_relation_starMap&amp;fromModule=lemma_relation-starMap&amp;lemmaIdFrom=1307024">冈崎朋也</a></li>
+  <li><a href="https://baike.baidu.com/item/%E8%97%A4%E6%9E%97%E6%9D%8F/1307563?lemmaFrom=lemma_starMap&amp;fromModule=lemma_starMap&amp;starNodeId=feb21778386b32baa353be89&amp;lemmaIdFrom=1307288">藤林杏</a></li>
+  <li><a href="https://baike.baidu.com/item/%E4%B8%80%E4%B9%8B%E6%BF%91%E7%90%B4%E7%BE%8E/854562?lemmaFrom=lemma_starMap&amp;fromModule=lemma_starMap&amp;starNodeId=feb21778386b32baa353be89&amp;lemmaIdFrom=1307563">一之濑琴美</a></li>
+  <li><a href="https://baike.baidu.com/item/%E5%9D%82%E4%B8%8A%E6%99%BA%E4%BB%A3/1307427?structureClickId=1307427&amp;structureId=feb21778386b32baa353be89&amp;structureItemId=f008437b19d4e9b1932d2650&amp;lemmaFrom=starMapContent_star&amp;fromModule=starMap_content&amp;lemmaIdFrom=854562">坂上智代</a></li>
+  <li><a href="https://baike.baidu.com/item/%E4%BC%8A%E5%90%B9%E9%A3%8E%E5%AD%90/1307138?fromtitle=%E9%A3%8E%E5%AD%90&amp;fromid=13989797">伊吹风子</a></li>
+  <li><a href="https://baike.baidu.com/item/%E6%98%A5%E5%8E%9F%E9%98%B3%E5%B9%B3/4649184?structureClickId=4649184&amp;structureId=feb21778386b32baa353be89&amp;structureItemId=2767bec083ff3dac70673656&amp;lemmaFrom=starMapContent_star&amp;fromModule=starMap_content&amp;lemmaIdFrom=1307138">春原阳平</a></li>
+  <li><a href="https://baike.baidu.com/item/%E6%98%A5%E5%8E%9F%E8%8A%BD%E8%A1%A3/165114?structureClickId=165114&amp;structureId=feb21778386b32baa353be89&amp;structureItemId=d276fc8ff7a1cc5c74e768a2&amp;lemmaFrom=starMapContent_star&amp;fromModule=starMap_content&amp;lemmaIdFrom=4649184">春原芽衣</a></li>
+</ul>
+
+
+<footer>周一班22组制</footer>
+
+
+</body></html>

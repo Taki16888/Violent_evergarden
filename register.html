@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name = "author" counter = "20222427夏文韬 20222324 石国力">
+<title>用户注册</title>
+<style>
+body {
+	background:
+		url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg')
+		no-repeat;
+	background-size: cover;
+}
+
+#register_box {
+	width: 20%;
+	height: 400px;
+	background-color: #00000060;
+	margin: auto;
+	margin-top: 10%;
+	text-align: center;
+	border-radius: 10px;
+	padding: 50px 50px;
+}
+
+h2 {
+	color: #ffffff90;
+	margin-top: 5%;
+}
+
+.input_box {  
+    margin-top: 15px; 
+}  
+
+span {
+	color: #fff;
+}
+
+input {
+	border: 0;
+	width: 60%;
+	font-size: 15px;
+	color: #fff;
+	background: transparent;
+	border-bottom: 2px solid #fff;
+	padding: 5px 10px;
+	outline: none;
+	margin-top: 10px;
+}
+
+button {
+	margin-top: 50px;
+	width: 60%;
+	height: 30px;
+	border-radius: 10px;
+	border: 0;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	font-size: 15px;
+	background-image: linear-gradient(to right, #30cfd0, #330867);
+}
+
+#sign_up {
+	margin-top: 45%;
+	margin-left: 60%;
+}
+
+a {
+	color: #b94648;
+}
+</style>
+</head>
+<body>
+	<div id="register_box">
+		<h2>REGISTER</h2>
+		<form action="#" method="post" onsubmit="return validateRegisterForm()">
+			<div id="input_box">
+				<input type="text" id="registerUsername" placeholder="请输入用户名">
+			</div>
+			<div class="input_box">
+				<input type="password" id="registerPassword" placeholder="请输入密码">
+			</div>
+			<div class="input_box">
+				<input type="email" id="registerEmail" placeholder="请输入邮箱">
+			</div>
+			<button type="submit">注册</button> 
+		</form>
+	</div>
+
+	<script>
+		function validateRegisterForm() {
+			var registerUsername = document.getElementById('registerUsername').value;
+			var registerPassword = document.getElementById('registerPassword').value;
+			var registerEmail = document.getElementById('registerEmail').value;
+
+			if (registerUsername === '') {
+				alert('用户名不能为空！');
+				return false;
+			}
+			if (registerPassword === '') {
+				alert('密码不能为空！');
+				return false;
+			}
+			if (registerEmail === '') {
+				alert('邮箱不能为空！');
+				return false;
+			}
+			// 密码格式验证  
+			if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(registerPassword)) {
+				alert('密码至少8位，包含大写、小写字母和数字！');
+				return false;
+			}
+			// 邮箱格式验证  
+			if (!/^\S+@\S+\.\S+$/.test(registerEmail)) {
+				alert('邮箱格式不正确！');
+				return false;
+			}
+
+			// 表单验证通过，可以提交  
+			return true;
+		}
+	</script>
+
+</body>
+</html>

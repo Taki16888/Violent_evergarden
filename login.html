@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name = "20222427夏文韬 20222324石国力" counter = "20222427夏文韬 20222324 石国力">
+  <title>用户登录</title>
+  <style>
+    body {
+      background: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg');
+      background-size: 100% 130%;
+    }
+
+    #login_box {
+      width: 20%;
+      height: 400px;
+      background-color: #00000060;
+      margin: auto;
+      margin-top: 10%;
+      text-align: center;
+      border-radius: 10px;
+      padding: 50px 50px;
+    }
+
+    h2 {
+      color: #ffffff90;
+      margin-top: 5%;
+    }
+
+    #input-box {
+      margin-top: 5%;
+    }
+
+    span {
+      color: #fff;
+    }
+
+    input {
+      border: 0;
+      width: 60%;
+      font-size: 15px;
+      color: #fff;
+      background: transparent;
+      border-bottom: 2px solid #fff;
+      padding: 5px 10px;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 50px;
+      width: 60%;
+      height: 30px;
+      border-radius: 10px;
+      border: 0;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      font-size: 15px;
+      background-image: linear-gradient(to right, #30cfd0, #330867);
+    }
+
+    #sign_up {
+      margin-top: 45%;
+      margin-left: 60%;
+    }
+
+    a {
+      color: #b94648;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="login_box">
+    <h2>LOGIN</h2>
+    <form  action="#" method="post" onsubmit="return validateLoginForm()"> 
+    <div id="input_box">    
+        <input type="text" id="username" placeholder="请输入用户名">  
+      </div>  
+      <div class="input_box">   
+        <input type="password" id="password" placeholder="请输入密码">  
+      </div>  
+      <button type="submit">登录</button> 
+    </form>  
+    <p><a href="register.html">没有账号？立即注册</a></p>
+  </div>
+  
+   <script>
+        function validateLoginForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username.trim() === "" || password.trim() === "") {
+                alert("请输入你的用户名和密码！");
+                return false;
+            }
+            if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password)) {
+				alert('密码至少8位，包含大写、小写字母和数字！');
+				return false;
+			}
+       // 如果验证通过，则跳转到index.html
+            window.location.href = "index.html";
+            return false; // 阻止表单默认提交行为，因为我们已经通过JavaScript进行了跳转
+        }
+
+    </script>
+  
+</body>
+</html>
